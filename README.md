@@ -12,4 +12,4 @@ Folder for the web app
 Folder for machine learning models, technical analysis, and sentiment analysis
 
 ### Strategies
-Folder for VaR calculation and Portfolio Optimization
+Folder for VaR calculation and Portfolio Optimizatio
