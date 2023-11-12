@@ -1,10 +1,10 @@
 import { Layout, Card, Row, Col, Collapse } from "antd";
 import TradingViewWidget, { Themes } from "react-tradingview-widget";
-import { snpJustifications, ndaqJustifications } from "./static";
+import { xleJustifications, IauJustifications } from "./static";
 const { Content } = Layout;
 const { Panel } = Collapse;
 
-export const Equities = () => {
+export const Commodities = () => {
   return (
     <Content
       style={{
@@ -15,10 +15,10 @@ export const Equities = () => {
     >
       <Row gutter={[12]} style={{ marginBottom: "20px" }}>
         <Col span={12}>
-          <Card title={"SPDR S&P 500 ETF TRUST"}>
+          <Card title={"Energy Select Sector SPDR Fund (XLE)"}>
             <div style={{ width: "100%", height: "100%" }}>
               <TradingViewWidget
-                symbol={"SPY"}
+                symbol={"XLE"}
                 theme={Themes.DARK}
                 locale="en"
                 autosize={false}
@@ -27,9 +27,9 @@ export const Equities = () => {
               />
             </div>
             <div style={{ padding: "20px" }}>
-              <h1>Reasons to Choose S&P 500 ETF (SPY)</h1>
+              <h1>Reasons to Choose (XLE)</h1>
               <Collapse accordion style={{ width: "100%" }}>
-                {snpJustifications.map((justification, index) => (
+                {xleJustifications.map((justification, index) => (
                   <Panel
                     key={index}
                     header={`${index + 1}. ${justification.title}`}
@@ -42,10 +42,10 @@ export const Equities = () => {
           </Card>
         </Col>
         <Col span={12}>
-          <Card title={"NASDAQ, INC."}>
+          <Card title={"iShares Gold Trust (IAU)"}>
             <div style={{ width: "100%", height: "100%" }}>
               <TradingViewWidget
-                symbol={"NDAQ"}
+                symbol={"IAU"}
                 theme={Themes.DARK}
                 locale="en"
                 autosize={false}
@@ -54,9 +54,9 @@ export const Equities = () => {
               />
             </div>
             <div style={{ padding: "20px" }}>
-              <h1>Reasons to Choose NASDAQ ETF (NDAQ)</h1>
+              <h1>Reasons to Choose (IAU)</h1>
               <Collapse accordion style={{ width: "100%" }}>
-                {ndaqJustifications.map((justification, index) => (
+                {IauJustifications.map((justification, index) => (
                   <Panel
                     key={index}
                     header={`${index + 1}. ${justification.title}`}

@@ -1,5 +1,11 @@
-from app import create_app
+from flask import Flask
+from flask_cors import CORS
+from views.portfolio import portfolio_bp
+
+
+app = Flask(__name__)
+CORS(app)
+app.register_blueprint(portfolio_bp)
 
 if __name__ == '__main__':
-    app = create_app(debug=True)
-    app.run('0.0.0.0','8080')
+    app.run(debug=True)

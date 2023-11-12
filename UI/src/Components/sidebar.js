@@ -17,7 +17,7 @@ const items = [
     {
         key:"assets",
         icon: <PieChartOutlined />,
-        label:"Assets",
+        label:"Fundamentals",
         children:[
             {
                 key:"equities",
